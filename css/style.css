@@ -1,0 +1,15 @@
+.container{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.button{
+    font-size: 32px;
+    margin: 100px auto;
+    padding: 10px 15px;
+    background-color: teal;
+    border-radius: 25px;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+}

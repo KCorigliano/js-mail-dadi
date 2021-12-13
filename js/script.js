@@ -54,3 +54,26 @@ il numero del pc è ${pcNumberRounded},
 hai perso!`)
 }
 
+const buttonHTML = document.querySelector('.button');
+
+buttonHTML.addEventListener('click', function(){
+    let yourNumber =  (Math.random() * 6);
+    yourNumberRounded = yourNumber.toFixed(0);
+
+let pcNumber = (Math.random() * 6);
+    pcNumberRounded = pcNumber.toFixed(0);
+
+if (yourNumberRounded>pcNumberRounded){
+    alert(`Il tuo numero è ${yourNumberRounded},
+il numero del pc è ${pcNumberRounded},
+hai vinto!`)
+} else if (yourNumberRounded === pcNumberRounded){
+    alert(`Il tuo numero è ${yourNumberRounded},
+il numero del pc è ${pcNumberRounded},
+un bel pareggio!`)
+} else{
+    alert(`Il tuo numero è ${yourNumberRounded},
+il numero del pc è ${pcNumberRounded},
+hai perso!`)
+}
+});
