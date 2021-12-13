@@ -19,16 +19,22 @@ if (correct){
     let register = prompt('Registra la tua email');
     emailList.push(register);
     email = prompt('Registrazione riuscita! Accedi con la tua email')
+    
     for (i=0; i<emailList.length; i++){
         if (email.toLowerCase() === emailList[i].toLowerCase()){
            correct = true;
-           alert('Accesso effettuato, benvenuto!');
-        } else{
-            do {
-                email = prompt("Accedi con la giusta email!");
-            } while (correct);
         } 
     }
+        
+    if(correct){
+        alert('Accesso effettuato!')
+    } else {
+        do {
+            alert("Email non corretta!");
+            email = prompt("Accedi la tua email!");
+        } while (correct);
+    } 
+    
 }
 
 
