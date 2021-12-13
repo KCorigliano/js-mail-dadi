@@ -22,13 +22,12 @@ if (correct){
     for (i=0; i<emailList.length; i++){
         if (email.toLowerCase() === emailList[i].toLowerCase()){
            correct = true;
+           alert('Accesso effettuato, benvenuto!');
+        } else{
+            do {
+                email = prompt("Accedi con la giusta email!");
+            } while (correct);
         } 
-    }
-
-    if(correct){
-        alert('Accesso effettuato, benvenuto!');
-    } else {
-        alert('Email errata, ricaricare la pagina!');
     }
 }
 
