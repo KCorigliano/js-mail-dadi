@@ -40,10 +40,10 @@ if (correct){
 
 // Dadi
 
-let yourNumber =  (Math.random() * 6);
+let yourNumber =  Math.floor(Math.random() * ((6 + 1) - 1)) + 1;
     yourNumberRounded = yourNumber.toFixed(0);
 
-let pcNumber = (Math.random() * 6);
+let pcNumber = Math.floor(Math.random() * ((6 + 1) - 1)) + 1;
     pcNumberRounded = pcNumber.toFixed(0);
 
 if (yourNumberRounded>pcNumberRounded){
@@ -63,10 +63,10 @@ hai perso!`)
 const buttonHTML = document.querySelector('.button');
 
 buttonHTML.addEventListener('click', function(){
-    let yourNumber =  (Math.random() * 6);
+let yourNumber =  Math.floor(Math.random() * ((6 + 1) - 1)) + 1;
     yourNumberRounded = yourNumber.toFixed(0);
 
-let pcNumber = (Math.random() * 6);
+let pcNumber = Math.floor(Math.random() * ((6 + 1) - 1)) + 1;
     pcNumberRounded = pcNumber.toFixed(0);
 
 if (yourNumberRounded>pcNumberRounded){
