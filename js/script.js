@@ -16,23 +16,28 @@ if (correct){
     alert('Accesso effettuato!');
 } else {
     alert('Email non trovata, registrati ora!');
-    let register = prompt('Registra la tua email');
-    emailList.push(register);
+    let email = prompt('Registra la tua email');
+    emailList.push(email);
     email = prompt('Registrazione riuscita! Accedi con la tua email')
     
-    for (i=0; i<emailList.length; i++){
-        if (email.toLowerCase() === emailList[i].toLowerCase()){
-           correct = true;
-        } 
-    }
+    
         
     if(correct){
         alert('Accesso effettuato!')
     } else {
+        console.log('infinite loop');
         do {
+            correct=false;
             alert("Email non corretta!");
             email = prompt("Accedi la tua email!");
-        } while (correct);
+            for (i=0; i<emailList.length; i++){
+                if (email.toLowerCase() === emailList[i].toLowerCase()){
+                   correct = true;
+                } 
+            }
+        } while (!correct);
+        
+        alert('Accesso riuscito, benvenuto!');
     } 
     
 }
